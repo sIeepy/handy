@@ -13,6 +13,7 @@ gem "jquery-rails"
 gem "sass-rails"
 gem "sqlite3"
 gem "uglifier"
+gem 'simple_form'
 
 group :development do
   gem "better_errors"
