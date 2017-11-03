@@ -14,6 +14,7 @@ gem "sass-rails"
 gem "sqlite3"
 gem "uglifier"
 gem 'simple_form'
+gem "tabs_on_rails"
 
 group :development do
   gem "better_errors"
