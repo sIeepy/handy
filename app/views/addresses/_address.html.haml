@@ -1,24 +1,41 @@
+%br
 %h2.profile_scss
   Address
+%br
 .col-lg-12
   .form-inline.profile_scss
     .form-group
     .col-sm-2
-      Street Name:
+      Voivodeship:
     .col-sm-10
-      = profile.decorate.name_change
+      = address.decorate.voivodeship_change
   %br
   .form-inline.profile_scss
     .form-group
     .col-sm-2
-      Last name:
+      City:
     .col-sm-10
-      = profile.decorate.surname_change
+      = address.decorate.city_change
+  %br
+  .form-inline.profile_scss
+    .form-group
+    .col-sm-2
+      Street:
+    .col-sm-10
+      = address.decorate.street_change
   %br
   .profile_scss
     .form-inline.profile_scss
       .form-group
       .col-sm-2
-        Phone number:
+        Building number:
       .col-sm-10
-        = profile.decorate.phone_change
+        = address.decorate.building_number_change
+  %br
+  .profile_scss
+    .form-inline.profile_scss
+      .form-group
+      .col-sm-2
+        Appartment number:
+      .col-sm-10
+        = address.decorate.appartment_number_change

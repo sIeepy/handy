@@ -1,8 +1,8 @@
 class AddressesController < ApplicationController
 
   expose(:users)
-  expose(:user) { User.find(params[:id]) }
-  expose(:address) { Address.find(params[:id]) }
+  expose_decorated(:user) { User.find(params[:id]) }
+  expose_decorated(:address) { Address.find(params[:id]) }
 
   def update
     if address.update_attributes(address_params)

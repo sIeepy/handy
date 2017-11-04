@@ -30,11 +30,12 @@ end
 
 group :development, :test do
   gem "capybara"
-  gem 'factory_bot'
+  gem 'factory_bot_rails'
   gem "faker"
   gem "rspec-rails"
   gem "rubocop"
   gem "simplecov"
+  gem 'rails-controller-testing'
 end
 
 group :test do
