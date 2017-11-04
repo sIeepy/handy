@@ -1,0 +1,10 @@
+%h2
+  %div{:style => "display:table-cell; vertical-align: middle"}
+    %img{:src => "http://placehold.it/100x150", :style => "vertical-align:middle; max-height:100px;"}/
+  %div{:style => "display: table-cell; vertical-align: middle; padding-left: 10px;"}
+    %span.bold
+      = profile.first_name
+      = profile.last_name
+    %br/
+    %span.small.text-light
+      = user.name

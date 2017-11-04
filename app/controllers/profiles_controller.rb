@@ -6,14 +6,15 @@ class ProfilesController < ApplicationController
 
   def update
     if profile.update_attributes(profile_params)
-      flash[:success] = 'Profile updated'
-      redirect_to user_path
+      redirect_to user_path, notice: 'Profile succesfully updated'
+    else
+      redirect_to user_path, message: 'Profile not updated'
     end
   end
 
   private
 
   def profile_params
-    params.require(:profile).permit(:first_name, :lastename, :phone_number)
+    params.require(:profile).permit(:first_name, :last_name, :phone_number)
   end
 end
