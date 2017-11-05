@@ -5,5 +5,14 @@ FactoryBot.define do
     voivodeship { Faker::Address.state }
     appartment_number { Faker::Number.between(1, 100) }
     building_number { Faker::Address.building_number }
+    association :user, factory: :user
+  end
+
+  factory :address_empty, parent: :address do
+    city ''
+    street_name ''
+    voivodeship ''
+    appartment_number nil
+    building_number nil
   end
 end

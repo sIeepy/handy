@@ -4,4 +4,10 @@ FactoryBot.define do
     last_name { Faker::Name.last_name }
     phone_number { Faker::PhoneNumber.cell_phone }
   end
+
+  factory :profile_empty, parent: :profile do
+    first_name ''
+    last_name ''
+    phone_number nil
+  end
 end

@@ -8,21 +8,30 @@
     .col-sm-2
       Voivodeship:
     .col-sm-10
-      = address.decorate.voivodeship_change
+      - if address.voivodeship.empty?
+        = render 'partials/voivodeship'
+      - else
+        = address.voivodeship
   %br
   .form-inline.profile_scss
     .form-group
     .col-sm-2
       City:
     .col-sm-10
-      = address.decorate.city_change
+      - if address.city.empty?
+        = render 'partials/city'
+      - else
+        = address.city
   %br
   .form-inline.profile_scss
     .form-group
     .col-sm-2
       Street:
     .col-sm-10
-      = address.decorate.street_change
+      - if address.street_name.empty?
+        = render 'partials/street'
+      - else
+        = address.street_name
   %br
   .profile_scss
     .form-inline.profile_scss
@@ -30,7 +39,10 @@
       .col-sm-2
         Building number:
       .col-sm-10
-        = address.decorate.building_number_change
+        - if address.building_number.nil?
+          = render 'partials/building_number'
+        - else
+          = address.building_number
   %br
   .profile_scss
     .form-inline.profile_scss
@@ -38,4 +50,7 @@
       .col-sm-2
         Appartment number:
       .col-sm-10
-        = address.decorate.appartment_number_change
+        - if address.appartment_number.nil?
+          = render 'partials/appartment_number'
+        - else
+          = address.appartment_number

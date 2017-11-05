@@ -4,14 +4,20 @@
     .col-sm-2
       First name:
     .col-sm-10
-      = profile.decorate.name_change
+      - if profile.first_name.empty?
+        = render 'partials/name'
+      - else
+        = profile.first_name
   %br
   .form-inline.profile_scss
     .form-group
     .col-sm-2
       Last name:
     .col-sm-10
-      = profile.decorate.surname_change
+      - if profile.last_name.empty?
+        = render 'partials/surname'
+      - else
+        = profile.last_name
   %br
   .profile_scss
     .form-inline.profile_scss
@@ -19,5 +25,8 @@
       .col-sm-2
         Phone number:
       .col-sm-10
-        = profile.decorate.phone_change
+        - if profile.phone_number.nil?
+          = render 'partials/phone_number'
+        - else
+          = profile.phone_number
   %br
