@@ -1,0 +1,56 @@
+-# %br
+-# %h2.profile_scss
+-#   Address
+-# %br
+-# .col-lg-12
+-#   .form-inline.profile_scss
+-#     .form-group
+-#     .col-sm-2
+-#       Voivodeship:
+-#     .col-sm-10
+-#       - if address.voivodeship.empty?
+-#         = render 'address/voivodeship'
+-#       - else
+-#         = address.voivodeship
+-#   %br
+-#   .form-inline.profile_scss
+-#     .form-group
+-#     .col-sm-2
+-#       City:
+-#     .col-sm-10
+-#       - if address.city.empty?
+-#         = render 'address/city'
+-#       - else
+-#         = address.city
+-#   %br
+-#   .form-inline.profile_scss
+-#     .form-group
+-#     .col-sm-2
+-#       Street:
+-#     .col-sm-10
+-#       - if address.street_name.empty?
+-#         = render 'address/street'
+-#       - else
+-#         = address.street_name
+-#   %br
+-#   .profile_scss
+-#     .form-inline.profile_scss
+-#       .form-group
+-#       .col-sm-2
+-#         Building number:
+-#       .col-sm-10
+-#         - if address.building_number.nil?
+-#           = render 'address/building_number'
+-#         - else
+-#           = address.building_number
+-#   %br
+-#   .profile_scss
+-#     .form-inline.profile_scss
+-#       .form-group
+-#       .col-sm-2
+-#         Appartment number:
+-#       .col-sm-10
+-#         - if address.appartment_number.nil?
+-#           = render 'address/appartment_number'
+-#         - else
+-#           = address.appartment_number

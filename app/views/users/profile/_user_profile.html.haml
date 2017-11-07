@@ -1,0 +1,33 @@
+.col-lg-12
+  .form-inline.profile_scss
+    .form-group
+    .col-sm-2
+      First name:
+    .col-sm-10.js-property-container
+      .js-property-input{ class: ('hidden' if profile.first_name.present? ) }
+        = render 'users/profile/text_input', field_name: :first_name, field_value: profile.first_name
+      .js-property-text{ class: ('hidden' unless profile.first_name.present? ) }
+        = profile.first_name
+        = link_to 'show', '#', class: 'js-property-btn'
+  -# %br
+  -# .form-inline.profile_scss
+  -#   .form-group
+  -#   .col-sm-2
+  -#     Last name:
+  -#   .col-sm-10
+  -#     - if profile.last_name.empty?
+  -#       = render 'surname'
+  -#     - else
+  -#       = profile.last_name
+  -# %br
+  -# .profile_scss
+  -#   .form-inline.profile_scss
+  -#     .form-group
+  -#     .col-sm-2
+  -#       Phone number:
+  -#     .col-sm-10
+  -#       - if profile.phone_number.nil?
+  -#         = render 'phone_number'
+  -#       - else
+  -#         = profile.phone_number
+  -# %br

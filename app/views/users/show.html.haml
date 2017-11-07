@@ -8,9 +8,9 @@
   / Tab panes
   .tab-content
     #profile.tab-pane.active{:role => "tabpanel"}
-      = render 'partials/general_view'
-      = render 'profiles/user_profile'
-      = render 'addresses/address'
+      = render 'users/profile/general_view'
+      = render 'users/profile/user_profile'
+      = render 'users/address/address'
     #announcement.tab-pane{:role => "tabpanel"} tu beda kiedyś ogłoszenia
     #comments.tab-pane{:role => "tabpanel"} tu beda kiedyś komentarze
     #password.tab-pane{:role => "tabpanel"} tu bedzie zmiana hasła
