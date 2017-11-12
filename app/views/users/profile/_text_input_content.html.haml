@@ -1,0 +1,12 @@
+.col-lg-12
+  .form-inline.profile_scss
+    .form-group
+    .col-sm-2
+      = name
+    .col-sm-10.js-property-container
+      .js-property-input{ class: ('hidden' if field_value.present? ) }
+        = render 'users/profile/text_input', field_name: field_name, field_value: field_value, record_name: record_name
+      .js-property-text{ class: ('hidden' unless field_value.present? ) }
+        = field_value
+        = link_to 'Edit', '#', class: 'js-property-btn'
+  %br

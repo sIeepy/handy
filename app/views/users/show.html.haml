@@ -1,16 +1,15 @@
-%div{:role => "tabpanel"}
+%div{ role: "tabpanel" }
   / Nav tabs
-  %ul#my_menu.nav.nav-tabs{:role => "tablist"}
-    %li.active{:role => "presentation"}= link_to "Profile", '#profile', :role => "tab", :data => {:toggle => "tab"}
-    %li{:role => "presentation"}= link_to "Announcement", '#announcement', :role => "tab", :data => {:toggle => "tab"}
-    %li{:role => "presentation"}= link_to "Comments", '#comments', :role => "tab", :data => {:toggle => "tab"}
-    %li{:role => "presentation"}= link_to "Change password", '#password', :role => "tab", :data => {:toggle => "tab"}
+  %ul#my_menu.nav.nav-tabs{ role: "tablist" }
+    %li.active{ role: "presentation" }= link_to "Profile", '#profile', role: "tab", data: { toggle: "tab" }
+    %li{ role: "presentation" }= link_to "Announcement", '#announcement', role: "tab", data: { toggle: "tab" }
+    %li{ role: "presentation" }= link_to "Comments", '#comments', role: "tab", data: { toggle: "tab" }
+    %li{ role: "presentation"}= link_to "Change password", '#password', role: "tab", data: { toggle: "tab" }
   / Tab panes
   .tab-content
-    #profile.tab-pane.active{:role => "tabpanel"}
+    #profile.tab-pane.active{ role: "tabpanel" }
       = render 'users/profile/general_view'
       = render 'users/profile/user_profile'
-      = render 'users/address/address'
-    #announcement.tab-pane{:role => "tabpanel"} tu beda kiedyś ogłoszenia
-    #comments.tab-pane{:role => "tabpanel"} tu beda kiedyś komentarze
-    #password.tab-pane{:role => "tabpanel"} tu bedzie zmiana hasła
+    #announcement.tab-pane{ role: "tabpanel" } tu beda kiedyś ogłoszenia
+    #comments.tab-pane{ role: "tabpanel" } tu beda kiedyś komentarze
+    #password.tab-pane{ role: "tabpanel" } tu bedzie zmiana hasła
