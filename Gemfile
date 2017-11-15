@@ -16,6 +16,7 @@ gem "uglifier"
 gem 'simple_form'
 gem "tabs_on_rails"
 gem 'switchery-rails'
+gem 'paperclip'
 
 group :development do
   gem "better_errors"
