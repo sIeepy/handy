@@ -1,10 +1,23 @@
 = form_for announcement do |f|
-  = f.label :title
-  = f.text_field :title
-  = f.label :type
-  = f.text_field :type
-  = f.label :content
-  = f.text_field :content
-  = f.label :price
-  = f.text_field :price
+  .col-lg-2
+    = f.label :title
+  .col-lg-10
+    = f.text_area :title, cols: 100, rows: 2, placeholder: "Write title"
+  %br
+  .col-lg-2
+    = f.label :type
+  .col-lg-10
+    = f.select :announ_type, announcement.decorate.selection, { include_blank: 'Select Something' }, class: "col-md-3"
+  %br
+  .col-lg-2
+    = f.label :content
+  .col-lg-10
+    = f.text_area :content, cols: 100, rows: 5, placeholder: "Write new announcement"
+  %br
+  .col-lg-2
+    = f.label :price
+  .col-lg-10
+    = f.text_field :price
+    zł
+  %br
   = f.submit

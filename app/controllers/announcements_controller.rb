@@ -3,7 +3,7 @@ class AnnouncementsController < ApplicationController
   expose_decorated(:announcement)
 
   def create
-    announcement = current_user.announcements.build(announcement_params)
+    announcement = current_user.announcements.create(announcement_params)
     if announcement.save
       redirect_to announcements_path
     else
@@ -15,6 +15,6 @@ class AnnouncementsController < ApplicationController
   private
 
   def announcement_params
-    params.require(:announcement).permit(:content, :type, :title, :price)
+    params.require(:announcement).permit(:content, :announ_type, :title, :price)
   end
 end
