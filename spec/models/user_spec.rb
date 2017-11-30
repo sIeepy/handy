@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  it { should have_one(:profile) }
-  it { should have_one(:address) }
+  it { is_expected.to have_one(:profile).dependent(:destroy) }
+  it { is_expected.to have_one(:address).dependent(:destroy) }
+  it { is_expected.to have_many(:announcements).dependent(:destroy) }
 end

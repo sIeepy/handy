@@ -17,6 +17,8 @@ gem 'simple_form'
 gem "tabs_on_rails"
 gem 'switchery-rails'
 gem 'paperclip'
+gem 'time_difference'
+
 
 group :development do
   gem "better_errors"

@@ -1,5 +1,5 @@
 class AnnouncementsController < ApplicationController
-  expose_decorated(:announcements) { Announcement.all }
+  expose_decorated(:announcements) { Announcement.all.order('created_at DESC') }
   expose_decorated(:announcement)
 
   def create

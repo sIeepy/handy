@@ -1,8 +1,14 @@
-- announcements.each_with_index do |annon, i|
-  = annon.title
-  %br
-  = annon.announ_type
-  %br
-  = annon.content
-  %br
-  = annon.price
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        Announcement
+      %th
+        Created
+  %tbody
+    - announcements.each do |annon|
+      %tr
+        %td
+          = link_to "#{annon.title}", announcement_path(annon.id)
+        %td
+          = annon.decorate.creation
