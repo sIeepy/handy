@@ -1,0 +1,6 @@
+= form_for skill_set do |f|
+  = f.label :level
+  = f.text_field :level
+  = f.label :skill_name
+  = f.text_field :skill_name, data: {autocomplete_source: skill_index_path}
+  = f.submit

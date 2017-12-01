@@ -18,7 +18,7 @@ gem "tabs_on_rails"
 gem 'switchery-rails'
 gem 'paperclip'
 gem 'time_difference'
-
+gem 'jquery-ui-rails'
 
 group :development do
   gem "better_errors"
