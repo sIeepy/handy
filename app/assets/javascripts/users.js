@@ -1,3 +1,4 @@
+$.noConflict()
 $(document).ready(function() {
   $('.js-switch').attr("checked", false);
   $('.js-property-input').addClass('hidden');
@@ -28,4 +29,11 @@ $(document).ready(function() {
       });
     }
   });
+  $('a[data-toggle="tab"]').on('click', function(e) {
+    sessionStorage.setItem('lastTab', $(e.target).attr('href'));
+  });
+  var lastTab = sessionStorage.getItem('lastTab');
+  if (lastTab) {
+    $('#myTab a[href="' + lastTab + '"]').tab('show');
+  }
 });
