@@ -6,7 +6,8 @@ class UsersController < ApplicationController
   expose_decorated(:profile) { User.find(params[:id]).profile }
   expose_decorated(:address) { User.find(params[:id]).address }
   expose_decorated(:skill_set)
-  expose_decorated(:skills) { Skill.all } 
+  expose_decorated(:skill_sets) { SkillSet.all }
+  expose_decorated(:skills) { Skill.all }
 
   def render_profile(name, field_name, field_value, record_name)
     view_context.render partial: 'users/profile/text_input_content',

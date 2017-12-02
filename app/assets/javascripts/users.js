@@ -30,9 +30,9 @@ $(document).ready(function() {
     }
   });
   $('a[data-toggle="tab"]').on('click', function(e) {
-    sessionStorage.setItem('lastTab', $(e.target).attr('href'));
+    localStorage.setItem('lastTab', $(e.target).attr('href'));
   });
-  var lastTab = sessionStorage.getItem('lastTab');
+  var lastTab = localStorage.getItem('lastTab');
   if (lastTab) {
     $('#myTab a[href="' + lastTab + '"]').tab('show');
   }
