@@ -1,0 +1,12 @@
+%fieldset.rating
+  = form_for(SkillSet.new) do |f|
+    = f.label :skill_name
+    = f.text_field :skill_name, data: {autocomplete_source: skill_index_path}, id: 'js-skill-name'
+    -# = f.text_field :level, id: 'js-level'
+    %legend Please rate:
+    = f.radio_button :level, 5, id: "star5", class: 'rating_star'
+    = f.radio_button :level, 4, id: "star4"
+    = f.radio_button :level, 3, id: "star3"
+    = f.radio_button :level, 2, id: "star2"
+    = f.radio_button :level, 1, id: "star1"
+    = f.submit

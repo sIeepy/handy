@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   expose_decorated(:user) { User.find(params[:id]) }
   expose_decorated(:profile) { User.find(params[:id]).profile }
   expose_decorated(:address) { User.find(params[:id]).address }
-  expose_decorated(:skill_set)
+  expose_decorated(:skill_set) { User.find(params[:id]).skill_sets }
   expose_decorated(:skill_sets) { SkillSet.all }
   expose_decorated(:skills) { Skill.all }
 

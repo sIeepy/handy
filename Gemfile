@@ -19,6 +19,7 @@ gem 'switchery-rails'
 gem 'paperclip'
 gem 'time_difference'
 gem 'jquery-ui-rails'
+gem "font-awesome-rails"
 
 group :development do
   gem "better_errors"

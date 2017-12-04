@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/bmc/jquery-raty-rails.git
+  revision: a4fb8a9cc7d0b20ab4c0b8d0a6480dd31d4a8c26
+  specs:
+    jquery-raty-rails (0.0.2)
+      rails (>= 3.2.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -109,6 +116,8 @@ GEM
     faker (1.8.4)
       i18n (~> 0.5)
     ffi (1.9.18)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     haml (5.0.4)
@@ -322,8 +331,10 @@ DEPENDENCIES
   draper (= 3.0.0)
   factory_bot_rails
   faker
+  font-awesome-rails
   haml-rails
   jquery-rails
+  jquery-raty-rails!
   jquery-ui-rails
   letter_opener
   listen

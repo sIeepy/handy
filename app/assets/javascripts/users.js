@@ -30,10 +30,14 @@ $(document).ready(function() {
     }
   });
   $('a[data-toggle="tab"]').on('click', function(e) {
-    localStorage.setItem('lastTab', $(e.target).attr('href'));
+    sessionStorage.setItem('lastTab', $(e.target).attr('href'));
   });
-  var lastTab = localStorage.getItem('lastTab');
+  var lastTab = sessionStorage.getItem('lastTab');
   if (lastTab) {
     $('#myTab a[href="' + lastTab + '"]').tab('show');
   }
+
+  $("#js-skill-name").val("");
+  $("#js-level").val("");
+
 });
