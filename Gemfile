@@ -20,6 +20,7 @@ gem 'paperclip'
 gem 'time_difference'
 gem 'jquery-ui-rails'
 gem "font-awesome-rails"
+gem 'sprockets'
 
 group :development do
   gem "better_errors"
