@@ -1,3 +1,13 @@
-- lol.each do |l|
-  = l.name
-  = l.level
+.row
+  %table.table.table-striped
+    %thead
+      %tr
+        %th Name
+        %th Level
+        %th Update
+      - show_skill.each do |l|
+        %tbody
+          %tr
+            %td= l.name
+            %td= l.level
+            %td 

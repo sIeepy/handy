@@ -4,7 +4,7 @@ class Skill < ApplicationRecord
 
   validates_uniqueness_of :name
 
-  scope :toplisted, lambda { |user|
+  scope :listed, lambda { |user|
     select('skills.id, skills.name, skill_sets.level, skill_sets.user_id')
     .joins(:skill_sets)
     .where('skill_sets.user_id' => user.id)

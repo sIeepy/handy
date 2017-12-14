@@ -12,7 +12,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery-ui
 //= require jquery_ujs
 //= require switchery
 //= require_tree .
