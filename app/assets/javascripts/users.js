@@ -9,6 +9,12 @@ $(document).ready(function() {
     container.find('.js-property-text').addClass('hidden');
   });
 
+  $('.js-property-btn-skill').click(function() {
+    var container = $(this).parents('.js-property-container-skill');
+    container.find('.js-property-input-skill').removeClass('hidden');
+    container.find('.js-property-text-skill').addClass('hidden');
+  });
+
   var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
 
   elems.forEach(function(html) {

@@ -4,10 +4,18 @@
       %tr
         %th Name
         %th Level
-        %th Update
       - show_skill.each do |l|
         %tbody
-          %tr
+          %tr.js-property-container-skill
             %td= l.name
-            %td= l.level
-            %td 
+            %td.js-property-text-skill{ class: ('hidden' unless l.level.present? ) }
+              = l.level
+            %td.js-property-input-skill{ class: ('hidden' if l.level.present? ) }
+              = render 'users/skill/update', field_name: l.skills_set_id
+            %td
+              = link_to '#', class: 'js-property-btn-skill' do
+                %button.btn.btn-default
+                  = fa_icon "edit"
+              = link_to skill_set_path(l.skills_set_id), { method: :delete, controller: "skill_sets", action: :destroy } do
+                %button.btn.btn-default
+                  = fa_icon "times"

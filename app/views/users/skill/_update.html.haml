@@ -1,10 +1,7 @@
-= form_for(SkillSet.new) do |f|
-  = f.label :skill_name
-  = f.text_field :skill_name, data: {autocomplete_source: skill_index_path}, id: 'js-skill-name'
+= form_for SkillSet, url: url_for(controller: "skill_sets", action: :update, id: 'field_name') do |f|
   = f.radio_button :level, 5, id: "star5", class: 'rating_star'
   = f.radio_button :level, 4, id: "star4"
   = f.radio_button :level, 3, id: "star3"
   = f.radio_button :level, 2, id: "star2"
   = f.radio_button :level, 1, id: "star1"
-  %br
-  = f.submit 'Add skill'
+  = f.submit 'Update'
