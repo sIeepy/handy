@@ -1,7 +1,8 @@
-= form_for SkillSet, url: url_for(controller: "skill_sets", action: :update, id: 'field_name') do |f|
-  = f.radio_button :level, 5, id: "star5", class: 'rating_star'
-  = f.radio_button :level, 4, id: "star4"
-  = f.radio_button :level, 3, id: "star3"
-  = f.radio_button :level, 2, id: "star2"
-  = f.radio_button :level, 1, id: "star1"
-  = f.submit 'Update'
+= form_tag skill_set_path(field_name), method: :put do
+  = fields_for :skill_set do |ff|
+    = ff.radio_button :level, 5, id: "star5"
+    = ff.radio_button :level, 4, id: "star4"
+    = ff.radio_button :level, 3, id: "star3"
+    = ff.radio_button :level, 2, id: "star2"
+    = ff.radio_button :level, 1, id: "star1"
+  = submit_tag 'Update'

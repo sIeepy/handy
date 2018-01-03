@@ -14,9 +14,9 @@ class SkillSetsController < ApplicationController
 
   def update
     if skill_set.update_attributes(skill_set_params)
-      redirect_to user_path, notice: 'Profile succesfully updated'
+      redirect_to user_path(current_user), notice: 'Profile succesfully updated'
     else
-      redirect_to user_path, message: 'Profile not updated'
+      redirect_to user_path(current_user), message: 'Profile not updated'
     end
   end
 
