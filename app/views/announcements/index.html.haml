@@ -8,7 +8,8 @@
   %tbody
     - announcements.each do |annon|
       %tr
-        %td
-          = link_to "#{annon.title}", announcement_path(annon.id)
+        %h3
+          %td
+            = link_to "#{annon.title}", announcement_path(annon.id), class: "list_color"
         %td
           = annon.decorate.creation
