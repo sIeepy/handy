@@ -45,5 +45,4 @@ $(document).ready(function() {
 
   $("#js-skill-name").val("");
   $("#js-level").val("");
-
 });

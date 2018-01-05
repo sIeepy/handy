@@ -21,6 +21,8 @@ gem 'time_difference'
 gem 'jquery-ui-rails'
 gem "font-awesome-rails"
 gem 'sprockets'
+gem 'geocoder'
+gem 'gmaps4rails'
 
 group :development do
   gem "better_errors"
