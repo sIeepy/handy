@@ -2,6 +2,14 @@ class AnnouncementsController < ApplicationController
   expose_decorated(:announcements) { Announcement.all.order('created_at DESC') }
   expose_decorated(:announcement)
 
+  def show
+    @hash = Gmaps4rails.build_markers(current_user.address) do |user, marker|
+      marker.lat user.latitude
+      marker.lng user.longitude
+      marker.infowindow [user.street_name, user.building_number, user.city, user.voivodeship].compact.join(', ')
+    end
+  end
+
   def create
     announcement = current_user.announcements.create(announcement_params)
     if announcement.save
@@ -10,7 +18,6 @@ class AnnouncementsController < ApplicationController
 
     end
   end
-
 
   private
 

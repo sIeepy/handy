@@ -23,6 +23,8 @@ gem "font-awesome-rails"
 gem 'sprockets'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'underscore-rails'
+gem 'coffee-rails'
 
 group :development do
   gem "better_errors"
