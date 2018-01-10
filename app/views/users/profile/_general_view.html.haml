@@ -9,5 +9,6 @@
     %span.small.text-light
       = user.name
     .right
-      Edit profile
-      %input.js-switch{ type: "checkbox" }
+      - if user.decorate.user_validation
+        Edit profile
+        %input.js-switch{ type: "checkbox" }
