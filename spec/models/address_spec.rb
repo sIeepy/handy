@@ -11,5 +11,13 @@ RSpec.describe Address, type: :model do
   it { is_expected.to allow_value('').for(:voivodeship) }
   it { is_expected.to allow_value('').for(:appartment_number) }
   it { is_expected.to allow_value('').for(:building_number) }
-  it { is_expected.to belong_to(:user) } 
+  it { is_expected.to belong_to(:user) }
+
+  it '#address' do
+    place = FactoryBot.create(:address)
+    street = "#{place.street_name} #{place.building_number}"
+    city = place.city
+    voivodeship = place.voivodeship
+    expect(place.address).to eq "#{street}, #{city}, #{voivodeship}"
+  end
 end
