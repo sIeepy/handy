@@ -15,4 +15,8 @@ FactoryBot.define do
     appartment_number nil
     building_number nil
   end
+
+  factory :address_invalid, parent: :address do
+    building_number 'not number'
+  end
 end

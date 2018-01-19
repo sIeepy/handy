@@ -18,7 +18,7 @@ class AnnouncementsController < ApplicationController
     if announcement.save
       redirect_to announcements_path
     else
-
+      redirect_to announcements_path
     end
   end
 
