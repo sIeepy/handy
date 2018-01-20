@@ -31,7 +31,7 @@ RSpec.describe AddressesController, type: :controller do
         put :update, params: { id: @address,
                                address: attributes_for(:address, building_number: 'Larry') }
         @address.reload
-        @address.building_number.should_not eq('Larry')
+        expect(@address.building_number).to_not eq('Larry')
       end
 
       it "re-renders the edit method" do
